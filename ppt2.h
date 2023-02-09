@@ -3,8 +3,8 @@
 
 
 const int WIN = 10;
-const int PIEDRA = 3;
-const int PAPEL = 1;
+const int PIEDRA = 4;
+const int PAPEL = 2;
 const int TIJERA = WIN;
 const int NJUGADORES = 2;
 
