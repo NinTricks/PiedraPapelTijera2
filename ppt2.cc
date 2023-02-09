@@ -38,6 +38,12 @@ void Jugador::actualizarJugadaPasada(){
 
 
 ///////////////////////////////////////GESTOR
+Gestor::Gestor(){
+    for(int i=0; i<NJUGADORES; i++){
+        punt[i] = 0;
+    }
+}
+
 void Gestor::generarJugadores(istream& in, ostream& o){
     limpiarPantalla(o);
     o << "REGISTRO DE JUGADORES" << endl << endl;
