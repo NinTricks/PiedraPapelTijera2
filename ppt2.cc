@@ -141,6 +141,7 @@ void Gestor::printVictoria(istream& in, ostream& o){
     o << j[i].nombreJugador() << endl << endl;
 }
 
+
 //////////////////////////////////////////////////OTROS
 void limpiarPantalla(ostream& o){
     cout << "\033[2J\033[1;1H";
