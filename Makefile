@@ -16,6 +16,6 @@ $(PROG): $(OBJS)
 clean:
 	@rm -f $(PROG) $(OBJS) core *.s
 
-rational.o: ppt2.cc ppt2.h
+ppt2.o: ppt2.cc ppt2.h
 main.o: main.cc ppt2.h
 main.s: main.cc ppt2.h
