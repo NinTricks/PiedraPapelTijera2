@@ -34,6 +34,7 @@ class Gestor{
     
 
     public:
+    Gestor();
     void generarJugadores(istream& i, ostream& o);
     bool seguirManga(istream& i,ostream& o);
     void printPuntos(istream& i,ostream& o);
