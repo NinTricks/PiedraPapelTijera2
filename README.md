@@ -8,7 +8,6 @@ Queda por determinar el sistema de puntos para que sea equilibrado e interesante
 
 
 # Por hacer:
-- Gestor de la partida
-- Programa del jugador
 - IAs para testear el sistema de puntuación
 - Multijugador no local
+- Valorar la organización interna del código
