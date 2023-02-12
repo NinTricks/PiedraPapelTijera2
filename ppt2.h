@@ -24,6 +24,8 @@ class Jugador{
     int miJugadaPasada();
     void actualizarJugadaPasada();
 
+    void registrarIA(int n);
+
 
 };
 
@@ -43,6 +45,10 @@ class Gestor{
     void calcPuntos();
     void actualizarJugadaPasada();
     void printVictoria(istream& in, ostream& o);
+
+    void generarIAs();
+    void jugadaIA(const int n, const int jugadote);
+    int ganador();
 };
 
 void limpiarPantalla(ostream& o);

@@ -1,0 +1,22 @@
+PROG:=mainIA
+SRCS:=ppt2.cc mainIA.cc #trie.cc
+
+CXX:= g++
+
+OBJS:=$(SRCS:.cc=.o)
+
+all: $(PROG) mainIA.s
+
+$(PROG): $(OBJS)
+	$(CXX) -o $@ $(OBJS)
+
+.cc.o:
+	$(CXX) -c $<
+
+clean:
+	@rm -f $(PROG) $(OBJS) core *.s
+
+ppt2.o: ppt2.cc ppt2.h
+mainIA.o: mainIA.cc ppt2.h #trie.h
+mainIA.s: mainIA.cc ppt2.h #trie.h
+#trie.o: trie.cc trie.h

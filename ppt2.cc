@@ -37,6 +37,12 @@ void Jugador::actualizarJugadaPasada(){
 }
 
 
+
+void Jugador::registrarIA(int n){
+    id = "IA" + to_string(n);
+}
+
+
 ///////////////////////////////////////GESTOR
 Gestor::Gestor(){
     for(int i=0; i<NJUGADORES; i++){
@@ -146,6 +152,36 @@ void Gestor::printVictoria(istream& in, ostream& o){
     o << "-------------------GANADOR-------------------" << endl;
     o << j[i].nombreJugador() << endl << endl;
 }
+
+
+
+
+
+void Gestor::generarIAs(){
+    for(int i=0; i<NJUGADORES; i++){
+        j[i].registrarIA(i);
+    }
+
+}
+
+
+void Gestor::jugadaIA(const int n, const int jugadote){
+    j[n].guardarJugada(jugadote);
+}
+
+int Gestor::ganador(){
+    bool seguir = true;
+    int i;
+    for(i = 0; i<NJUGADORES && seguir; i++){
+        if(punt[i] >= 10){
+            seguir = false;
+        }
+    }
+    i--;
+    return i;
+
+}
+
 
 
 //////////////////////////////////////////////////OTROS
